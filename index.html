@@ -96,12 +96,13 @@ function renderCats() {
   CATS.forEach(function(c){ var o = document.createElement('option'); o.value = c; o.textContent = c; s.appendChild(o); });
 }
 function money(v, cur) { return (cur && cur !== 'USD') ? (cur + ' ' + v) : '$' + v.toFixed(2); }
-function el(p) {
+function el(p, i) {
   var price = money(p.price, p.currency);
   var old = (p.regular && p.regular > p.price) ? '<span class="old">' + money(p.regular, p.currency) + '</span>' : '';
   var rate = p.rating ? '<div class="rate">' + '★'.repeat(Math.round(p.rating)) + ' ' + p.rating.toFixed(1) + ' (' + p.reviews + ')</div>' : '';
+  var fp = i < 6 ? ' fetchpriority="high"' : '';
   return '<div class="card" data-slug="' + p.slug + '">' +
-    '<img loading="lazy" src="' + p.img + '" alt="' + esc(p.name) + '" onerror="this.style.display=\'none\'">' +
+    '<img loading="' + (i < 2 ? 'eager' : 'lazy') + '" width="400" height="400" decoding="async"' + fp + ' src="' + p.img + '" alt="' + esc(p.name) + '" onerror="this.style.display=\'none\'">' +
     '<div class="body"><span class="cat">' + esc((p.cats||[]).join(' · ')) + '</span>' +
     '<h3>' + esc(p.name) + '</h3>' +
     '<div class="price">' + old + money(p.price, p.currency) + '</div>' + rate +
