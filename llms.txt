@@ -1,0 +1,28 @@
+# Daqi (static storefront)
+
+> Daqi.SHOP is a fast static storefront for Daqi's global catalogue of downloadable digital products: AI prompt packs, collectible card packs, planners, printables, wallpapers, templates, and faith & culture products in many languages. All items are digital with instant delivery.
+
+## Key pages
+- Static storefront: https://daqi-shop.pages.dev/
+- Full store (checkout): https://daqi.shop/
+- Full store sitemap: https://daqi.shop/sitemap_index.xml
+- Full store llms.txt: https://daqi.shop/llms.txt
+
+## Product categories (2028 products total)
+- Virtual & Service (1387 products)
+- AI Prompt (740 products)
+- Religion & Faith (500 products)
+- Digital Products & Services (500 products)
+- Faith & Culture (500 products)
+- AI Collectible Cards (300 products)
+- AI Prompt Packs (140 products)
+- Creator Content Kits (90 products)
+- Business Templates (90 products)
+- Islam (81 products)
+- Planners & Printables (80 products)
+- Indonesian (79 products)
+
+## Notes
+- All products are virtual/digital; most are downloadable files delivered after purchase.
+- Prices are displayed in USD.
+- Product detail and checkout are handled on https://daqi.shop/.
