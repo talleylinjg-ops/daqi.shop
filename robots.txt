@@ -1,11 +1,101 @@
-User-agent: *
-Allow: /
+# 通用 WordPress robots.txt 模板
+# 适用于：普通网站、博客、WooCommerce 电商站
 
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /wp-content/plugins/
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+Disallow: /?s=
 Disallow: /cart/
 Disallow: /checkout/
 Disallow: /my-account/
+Disallow: /addons/
+Disallow: /*?add-to-cart=*
+Disallow: /*?product-page=*
+Disallow: /*?wc-ajax=*
 
-# GEO / AI retrieval crawlers (allowed so the store can be cited by AI)
+# 允许搜索引擎抓取必要的资源（可选）
+Allow: /wp-content/uploads/
+
+# 站点地图
+Sitemap: https://daqi.shop/sitemap_index.xml
+
+# 允许谷歌
+User-agent: Googlebot
+Allow: /
+
+# 允许必应
+User-agent: bingbot
+Allow: /
+
+# 允许Yandex
+User-agent: YandexBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# ==============================================
+# 社交平台爬虫（Facebook / YouTube / TikTok / X 等）
+# ==============================================
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: TikTokBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Pinterestbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+# 屏蔽消耗资源的爬虫（可选择性使用）
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+Disallow: /*?add-to-cart=
+Disallow: /cart/
+Disallow: /checkout/
+
+User-agent: ShapBot
+Disallow: /
+
+# 屏蔽国内搜索引擎
+User-agent: 360Spider
+Disallow: /
+User-agent: Baiduspider
+Disallow: /
+User-agent: Sogouspider
+Disallow: /
+User-agent: YisouSpider
+Disallow: /
+
+# ==============================================
+# GEO / AI 检索爬虫（允许抓取，便于被 AI 引用）
+# ==============================================
 User-agent: GPTBot
 Allow: /
 
@@ -38,5 +128,3 @@ Allow: /
 
 User-agent: cohere-ai
 Allow: /
-
-Sitemap: https://daqi-shop.pages.dev/sitemap.xml
